@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 34px 0 0 34px;
+    &__menu {
+        display: flex;
+        align-items: center;
+        column-gap: 32px;
+        width: 70%;
+        &__link {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $link_color;
+        }
+    }
+}

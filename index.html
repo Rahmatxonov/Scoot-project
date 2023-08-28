@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="navbar">
                     <a href="./index.html">
-                        <img src="./images/icons/scoot-logo.svg" alt="scoot">
+                        <img class="navbar__logo" src="./images/icons/scoot-logo.svg" alt="scoot">
                     </a>
                     <ul class="navbar__menu">
                         <li class="navbar__menu__item">
@@ -30,10 +30,28 @@
                     <button class="navbar__menu__btn">
                         Get Scootin
                     </button>
+                    <img class="navbar__burger" src="./images/icons/add__btn.svg" alt="burger">
+                    <img class="navbar__remove" src="./images/icons/remove__btn.svg" alt="remove">
                 </div>
             </div>
         </nav>
     </header>
+    <script>
+        const btn = document.querySelector('.navbar__burger');
+        const menu = document.querySelector('.navbar__menu');
+        const remove__btn = document.querySelector('.navbar__remove');
+
+        btn.addEventListener('click', () => {
+            menu.classList.add('show');
+            remove__btn.style.display = 'block';
+            btn.style.display = 'none';
+        });
+        remove__btn.addEventListener('click', () => {
+            menu.classList.remove('show');
+            remove__btn.style.display = 'none';
+            btn.style.display = 'block';
+        })
+    </script>
 </body>
 
 </html>

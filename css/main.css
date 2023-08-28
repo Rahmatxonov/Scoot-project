@@ -33,8 +33,8 @@ header {
   background-image: url(../../images/desktop-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: 98px;
   height: 100vh;
+  background-position-y: 98px;
   position: relative;
 }
 @media (max-width: 768px) {
@@ -46,6 +46,107 @@ header {
   header {
     background-image: url(../../images/header-phone.jpg);
   }
+}
+
+.hero__title {
+  max-width: 500px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+  color: #FFFFFF;
+  padding-top: 210px;
+}
+@media (max-width: 768px) {
+  .hero__title {
+    max-width: 563px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .hero__title {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1.79px;
+  }
+}
+.hero__text {
+  max-width: 405px;
+  width: 100%;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #FFFFFF;
+  padding-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .hero__text {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .hero__text {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+.hero__top {
+  padding-left: 80px;
+  padding-top: 40px;
+  padding-bottom: 152px;
+}
+@media (max-width: 768px) {
+  .hero__top {
+    padding: 0;
+  }
+}
+.hero__btn {
+  max-width: 180px;
+  width: 100%;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  padding: 14px 39px;
+  border: 1px solid transparent;
+  background-color: #FCB72B;
+  color: #FFFFFF;
+  transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+  .hero__btn {
+    display: flex;
+    max-width: 180px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.hero__btn:hover {
+  background-color: #FFFFFF;
+  border: 1px solid #FCB72B;
+  color: #FCB72B;
+  cursor: pointer;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background-color: #FFFFFF;
 }
 
 .navbar {

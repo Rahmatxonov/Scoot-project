@@ -72,6 +72,10 @@
         position: relative;
         &__img {
             border-radius: 50%;
+            @include for-phone {
+                width: 340px;
+                height: 340px;
+            }
         }
         &__str {
             position: absolute;
@@ -79,8 +83,8 @@
             right: -170px;
             z-index: 3;
             @include for-phone {
-                top: 235px;
-                right: -280px;
+                top: 3px;
+                right: -545px;
             }
         }
     }

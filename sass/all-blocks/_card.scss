@@ -1,0 +1,66 @@
+.card__info {
+    margin-top: 160px;
+    background-image: url(../../images/icons/tire.svg);
+    background-repeat: no-repeat;
+    background-position-y: 45px;
+    background-position-x: -100px;
+    @include for-tablet {
+        background-image: none;
+        margin-top: 0;
+        background-image: url(../../images/icons/tire-y.svg);
+        background-repeat: no-repeat;
+    }
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    @include for-tablet {
+        display: block;
+        padding-top: 122px;
+    }
+    &__item {
+        @include for-tablet {
+            display: flex;
+            align-items: center;
+            column-gap: 79px;
+            row-gap: 40px;
+        }
+        &__span {
+            display: inline-block;
+            padding-top: 40px;
+        }
+        &__title {
+            max-width: 350px;
+            width: 100%;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: -1.07px;
+            color: $title_color;
+            @include for-tablet {
+                max-width: 398px;
+                width: 100%;
+            }
+            @include for-phone {
+                font-size: 20px;
+                letter-spacing: -0.89px;
+                color: $title_color;
+            }
+        }
+        &__text {
+            max-width: 350px;
+            width: 100%;
+            font-family: $text_font;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            color: #939CAA;
+            padding-top: 24px;
+            @include for-phone {
+                text-align: center;
+            }
+        }
+    }
+}

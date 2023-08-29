@@ -17,15 +17,20 @@
                         <img class="navbar__logo" src="./images/icons/scoot-logo.svg" alt="scoot">
                     </a>
                     <ul class="navbar__menu">
-                        <li class="navbar__menu__item">
-                            <a class="navbar__menu__link" href="#">About</a>
-                        </li>
-                        <li class="navbar__menu__item">
-                            <a class="navbar__menu__link" href="#">Location</a>
-                        </li>
-                        <li class="navbar__menu__item">
-                            <a class="navbar__menu__link" href="#">Careers</a>
-                        </li>
+                        <span class="navbar__menu__items">
+                            <li class="navbar__menu__item">
+                                <a class="navbar__menu__link" href="#">About</a>
+                            </li>
+                            <li class="navbar__menu__item">
+                                <a class="navbar__menu__link" href="#">Location</a>
+                            </li>
+                            <li class="navbar__menu__item">
+                                <a class="navbar__menu__link" href="#">Careers</a>
+                            </li>
+                        </span>
+                        <button class="navbar__menu__link__btn">
+                            Get Scootin
+                        </button>
                     </ul>
                     <button class="navbar__menu__btn">
                         Get Scootin
@@ -45,6 +50,35 @@
             </div>
         </div>
     </header>
+    <main>
+        <section class="card__info">
+            <div class="container">
+                <div class="card">
+                    <div class="card__item">
+                        <img class="card__item__img" src="./images/icons/card-tel.svg" alt="card icon">
+                        <span class="card__item__span">
+                            <h3 class="card__item__title">Locate with app</h3>
+                            <p class="card__item__text">Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away. </p>
+                        </span>
+                    </div>
+                    <div class="card__item">
+                        <img src="./images/icons/card-tel.svg" alt="card icon">
+                        <span class="card__item__span">
+                            <h3 class="card__item__title">Pick your scooter</h3>
+                            <p class="card__item__text">We show the most important info for the scooters closest to you. So you know how much charge they have left and can see roughly how much it will cost. </p>
+                        </span>
+                    </div>
+                    <div class="card__item">
+                        <img src="./images/icons/card-tel.svg" alt="card icon">
+                        <span class="card__item__span">
+                            <h3 class="card__item__title">Enjoy the ride</h3>
+                            <p class="card__item__text">Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, and you’re off! Always lock bikes away from walkways and accessibility ramps. </p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <script>
         const btn = document.querySelector('.navbar__burger');
         const menu = document.querySelector('.navbar__menu');
@@ -59,6 +93,7 @@
             menu.classList.remove('show');
             remove__btn.style.display = 'none';
             btn.style.display = 'block';
+
         })
     </script>
 </body>

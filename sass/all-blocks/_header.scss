@@ -3,14 +3,13 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    background-position-y: 98px;
+    background-position-y: 80px;
     @include for-tablet {
-        background-image: url(../../images/header-tablet.jpg);
+        background-image: url(../../images/tablet-bg.jpg);
     }
     @include for-phone {
-        background-image: url(../../images/header-phone.jpg);
+        background-image: url(../../images/phone-bg.jpg);
     }
-    position: relative;
 }
 
 .hero {
@@ -62,7 +61,7 @@ header {
         }
     }
     &__top {
-        padding-left: 80px;
+        padding-left: 130px;
         padding-top: 40px;
         padding-bottom: 152px;
         @include for-tablet {
@@ -90,7 +89,7 @@ header {
         }
     }
     &__btn:hover {
-        background-color: $white_color;
+        background-color: rgba(255, 255, 255, 0);
         border: 1px solid $button_color;
         color: $button_color;
         cursor: pointer;
@@ -133,14 +132,16 @@ nav {
         @include for-phone {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            padding: 64px 168px 0 32px;
             position: absolute;
-            top: 98px;
-            left: -30px;
+            top: 77px;
+            left: 0;
             background-color: #333A44;
-            height: 85vh;
+            height: 91vh;
             max-width: 300px;
             width: 100%;
-            row-gap: 25px;
+            row-gap: 24px;
             transform: translateX(-100px);
             visibility: hidden;
             transition: 0.5s ease-in;
@@ -153,12 +154,43 @@ nav {
             font-size: 15px;
             line-height: 25px;
             transition: 0.3s ease;
+            @include for-phone {
+                color: #E5ECF4;
+                font-size: 18px;
+            }
+            &__btn {
+                display: none;
+                width: 192px;
+                margin: 0 auto;
+                font-family: $title_font;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 25px;
+                text-align: center;
+                padding: 14px 39px;
+                border: 1px solid transparent;
+                background-color: $button_color;
+                color: $white_color;
+                transition: 0.3s ease;
+                margin-bottom: 24px;
+                @include for-phone {
+                    display: block;
+                }
+            }
+            &__btn:hover {
+                background-color: $white_color;
+                border: 1px solid $button_color;
+                color: $button_color;
+                cursor: pointer;
+            }
         }
         &__link:hover {
-            border-bottom: 2px solid $button_color;
+            border-bottom: 3px solid $button_color;
             cursor: pointer;
         }
         &__btn {
+            max-width: 180px;
+            width: 100%;
             font-family: $title_font;
             font-weight: 700;
             font-size: 15px;
@@ -179,6 +211,16 @@ nav {
             color: $button_color;
             cursor: pointer;
         }
+        &__items {
+            display: flex;
+            align-items: center;
+            column-gap: 32px;
+            @include for-phone {
+                display: flex;
+                flex-direction: column;
+                row-gap: 24px;
+            }
+        }
     }
 }
 
@@ -196,10 +238,10 @@ only screen and (min-resolution: 2dppx) {
     header {
         background-image: url(../../images/desktop-bg-2x.jpg);
         @include for-tablet {
-            background-image: url(../../images/header-tablet-2x.jpg);
+            background-image: url(../../images/tablet-bg-2x.jpg);
         }
         @include for-phone {
-            background-image: url(../../images/header-phone-2x.jpg);
+            background-image: url(../../images/phone-bg-2x.jpg);
         }
     }
 }

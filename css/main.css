@@ -34,17 +34,16 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  background-position-y: 98px;
-  position: relative;
+  background-position-y: 80px;
 }
 @media (max-width: 768px) {
   header {
-    background-image: url(../../images/header-tablet.jpg);
+    background-image: url(../../images/tablet-bg.jpg);
   }
 }
 @media (max-width: 576px) {
   header {
-    background-image: url(../../images/header-phone.jpg);
+    background-image: url(../../images/phone-bg.jpg);
   }
 }
 
@@ -104,7 +103,7 @@ header {
   }
 }
 .hero__top {
-  padding-left: 80px;
+  padding-left: 130px;
   padding-top: 40px;
   padding-bottom: 152px;
 }
@@ -136,7 +135,7 @@ header {
   }
 }
 .hero__btn:hover {
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0);
   border: 1px solid #FCB72B;
   color: #FCB72B;
   cursor: pointer;
@@ -187,14 +186,16 @@ nav {
   .navbar__menu {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 168px 0 32px;
     position: absolute;
-    top: 98px;
-    left: -30px;
+    top: 77px;
+    left: 0;
     background-color: #333A44;
-    height: 85vh;
+    height: 91vh;
     max-width: 300px;
     width: 100%;
-    row-gap: 25px;
+    row-gap: 24px;
     transform: translateX(-100px);
     visibility: hidden;
     transition: 0.5s ease-in;
@@ -209,11 +210,46 @@ nav {
   line-height: 25px;
   transition: 0.3s ease;
 }
+@media (max-width: 576px) {
+  .navbar__menu__link {
+    color: #E5ECF4;
+    font-size: 18px;
+  }
+}
+.navbar__menu__link__btn {
+  display: none;
+  width: 192px;
+  margin: 0 auto;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  padding: 14px 39px;
+  border: 1px solid transparent;
+  background-color: #FCB72B;
+  color: #FFFFFF;
+  transition: 0.3s ease;
+  margin-bottom: 24px;
+}
+@media (max-width: 576px) {
+  .navbar__menu__link__btn {
+    display: block;
+  }
+}
+.navbar__menu__link__btn:hover {
+  background-color: #FFFFFF;
+  border: 1px solid #FCB72B;
+  color: #FCB72B;
+  cursor: pointer;
+}
 .navbar__menu__link:hover {
-  border-bottom: 2px solid #FCB72B;
+  border-bottom: 3px solid #FCB72B;
   cursor: pointer;
 }
 .navbar__menu__btn {
+  max-width: 180px;
+  width: 100%;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: 15px;
@@ -236,6 +272,18 @@ nav {
   color: #FCB72B;
   cursor: pointer;
 }
+.navbar__menu__items {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+}
+@media (max-width: 576px) {
+  .navbar__menu__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+}
 
 .show {
   transform: translateX(0);
@@ -249,11 +297,87 @@ nav {
 }
 @media only screen and (-webkit-min-devace-pixel-ratio: 2) and (max-width: 768px), only screen and (min--moz-devace-pixel-ratio: 2) and (max-width: 768px), only screen and (-o-min-devace-pixel-ratio: 2/1) and (max-width: 768px), only screen and (min-devace-pixel-ratio: 2) and (max-width: 768px), only screen and (min-resolution: 192dpi) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px) {
   header {
-    background-image: url(../../images/header-tablet-2x.jpg);
+    background-image: url(../../images/tablet-bg-2x.jpg);
   }
 }
 @media only screen and (-webkit-min-devace-pixel-ratio: 2) and (max-width: 576px), only screen and (min--moz-devace-pixel-ratio: 2) and (max-width: 576px), only screen and (-o-min-devace-pixel-ratio: 2/1) and (max-width: 576px), only screen and (min-devace-pixel-ratio: 2) and (max-width: 576px), only screen and (min-resolution: 192dpi) and (max-width: 576px), only screen and (min-resolution: 2dppx) and (max-width: 576px) {
   header {
-    background-image: url(../../images/header-phone-2x.jpg);
+    background-image: url(../../images/phone-bg-2x.jpg);
+  }
+}
+.card__info {
+  margin-top: 160px;
+  background-image: url(../../images/icons/tire.svg);
+  background-repeat: no-repeat;
+  background-position-y: 45px;
+  background-position-x: -100px;
+}
+@media (max-width: 768px) {
+  .card__info {
+    background-image: none;
+    margin-top: 0;
+    background-image: url(../../images/icons/tire-y.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+@media (max-width: 768px) {
+  .card {
+    display: block;
+    padding-top: 122px;
+  }
+}
+@media (max-width: 768px) {
+  .card__item {
+    display: flex;
+    align-items: center;
+    column-gap: 79px;
+    row-gap: 40px;
+  }
+}
+.card__item__span {
+  display: inline-block;
+  padding-top: 40px;
+}
+.card__item__title {
+  max-width: 350px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07px;
+  color: #495567;
+}
+@media (max-width: 768px) {
+  .card__item__title {
+    max-width: 398px;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .card__item__title {
+    font-size: 20px;
+    letter-spacing: -0.89px;
+    color: #495567;
+  }
+}
+.card__item__text {
+  max-width: 350px;
+  width: 100%;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939CAA;
+  padding-top: 24px;
+}
+@media (max-width: 576px) {
+  .card__item__text {
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */
